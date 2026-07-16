@@ -1,5 +1,7 @@
 # A language to describe analog circuits
 
+Academic project, 2009, B.Tech;
+
 ## Syntax
 
 ### Keywords
@@ -41,7 +43,7 @@ Indicates a derivative operation in time of a quantity, which could be a voltage
     
     component capacitor<t0, t1>(C, V0)
     {
-        current<t0> = C * diff(voltage<t1, t2>, V0);
+        current<t0> = C * diff(voltage<t0, t1>, V0);
     }
     
     main
