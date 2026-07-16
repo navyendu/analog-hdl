@@ -1,4 +1,4 @@
-include "defs.f"
+include "lib.f"
 
 component lpf<in, com, out>
 {
@@ -10,7 +10,7 @@ component lpf<in, com, out>
 main
 {
     node no1, no2;
-
+    
     vdc V1 <no1, gnd> (5);
-    lpf x1<no1, gnd, no2>;
+    lpf x1 <no1, gnd, no2>;
 }
