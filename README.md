@@ -1,37 +1,33 @@
 # A language to describe analog circuits
 
-This work was performed as part of my B. Tech project (https://github.com/navyendu/accel). Rights may be owned by my university.
+## Syntax
 
-This is initial revision, as-is, developed in 2009. May undergo changes in future.
+### Keywords
 
-# Syntax
-
-## Keywords
-
-### `component`
+#### `component`
 Describes an cicruit component with multiple leads, such as resistor, capacitor or amplifier. Values enclosed in angle brackets indicate lead names while parantheses indicate values that associate with the component, such as resistance or amplification factor. Curly braces are used to group the equations that govern the component
 
-### `main`
+#### `main`
 Top level circuit
 
-### `node`
+#### `node`
 Describes a node in the circuit
 
-### `probe`
+#### `probe`
 Indicates a node to be probed during simulation. Might be deprecated in future
 
-## operators
+### operators
 
-### `voltage<lead1, lead2>`
+#### `voltage<lead1, lead2>`
 Indicates the voltage of `lead1` with `lead2` as the reference
 
-### `current<lead>`
+#### `current<lead>`
 Indicates the current entering the component via `lead1`
 
-### `diff(voltage|current, initial_value)`
+#### `diff(voltage|current, initial_value)`
 Indicates a derivative operation in time of a quantity, which could be a voltage or a current. `initial_value` indicates the value of the quantity at start of simulation
 
-# Example
+## Example
 
     component vdc < t0, t1> ( V )
     {
